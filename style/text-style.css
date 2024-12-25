@@ -1,0 +1,144 @@
+@keyframes colorCycle {
+    0% { background-color: red; }
+    33% { background-color: blue; }
+    66% { background-color: green; }
+    100% { background-color: red; }
+}
+
+text-style {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 1000;
+    text-shadow: 1px 1px 0px black, 0px 0px 2px black, 1px 1px 2px black;
+    color: white;
+
+    &[text="prestige"] {
+        color: #00ffff;
+    };
+
+    &[text="fish"] {
+        color: #ffa500;
+    };
+
+    &[text="shark"] {
+        color: #93a3ac;
+    };
+
+    &[text="coral"] {
+        color: coral;
+    };
+
+    &[text="ice"] {
+        color: skyblue;
+    };
+
+    &[text="salt"] {
+        color: whitesmoke;
+    };
+
+    &[text="snow"] {
+        color: snow;
+    };
+
+    &[text="kelp"] {
+        color: #bd9159;
+    };
+
+    &[text="red"] {
+        color: red;
+    };
+    &[text="green"] {
+        color: limegreen;
+    };
+    &[text="gold"] {
+        color: gold;
+    };
+
+    @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+        &[text="core"],
+        &[text="humanoid"],
+        &[text="black-hole"],
+        &[text="observ"],
+        &[text="reserv"],
+        &[text="traject"],
+        &[text="experiment"],
+        &[text="star"],
+        &[text = "infinity"],
+        &[text="corruption"],
+        &[text = "rainbow"],
+        &[text = "quark"] {
+            filter: drop-shadow(1px 1px black) drop-shadow(0px 0px 1px black);
+            text-shadow: none;
+        };
+
+        &[text="core"] {
+            background: radial-gradient(circle, #feff00 0%, #ff5500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="humanoid"] {
+            background: linear-gradient(#003001, #00FF03, #003001);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="black-hole"] {
+            background: linear-gradient(magenta, magenta, purple, magenta, magenta);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="observ"] {
+            background: repeating-linear-gradient(-45deg, cyan, #00aeff 20px, cyan 40px);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="reserv"] {
+            background: repeating-linear-gradient(-45deg, #00aeff, #0051ff 20px, #00aeff 40px);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="traject"] {
+            background: repeating-linear-gradient(-45deg, #e5ff00, #73ff00 20px, #e5ff00 40px);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="experiment"] {
+            background: repeating-linear-gradient(-45deg, #ff3c00, #ff9100 20px, #ff3c00 40px);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="star"] {
+            background: repeating-linear-gradient(90deg, #c5fff7, #edff9e 20px, #c5fff7 40px);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="infinity"] {
+            background: repeating-linear-gradient(90deg, orange, yellow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+        &[text="corruption"] {
+            position: relative;
+            font-weight: bold;
+            color: rgb(255, 255, 255); /* Base color */
+        
+            text-shadow: 
+            0.05em 0.05em 0 #ff0000, /* Red glitch (5% of font size) */
+            -0.05em -0.05em 0 #00ffff; /* Cyan glitch (5% of font size) */
+        };
+        &[text="rainbow"] {
+            background: repeating-linear-gradient(90deg, red, orange, yellow, green, blue, purple, pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        };
+    
+        &[text="quark"] {
+            background: repeating-linear-gradient(90deg, red, blue, green);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           
+        }
+        
+        
+        
+    };
+};
